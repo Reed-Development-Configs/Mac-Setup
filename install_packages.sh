@@ -15,6 +15,9 @@ brew install mas
 # Install packages using Homebrew
 echo "Installing packages..."
 
+# SSH
+## brew install openssh
+
 # MacOS Monitor
 brew install --cask stats
 
