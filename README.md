@@ -87,4 +87,23 @@
     source ~/.zshrc  # or ~/.bashrc or ~/.bash_profile
     ```
 
+## 7 Manage Postgres
 
+1. Start Postgres
+    - `brew services start postgresql@14`
+
+      - starts the PostgreSQL service as a background service that will automatically start every time you boot up your machine. It essentially daemonizes the process.
+
+    - `brew services run postgresql@14`
+      - starts the PostgreSQL service in the foreground, meaning the service will only run as long as your terminal session is active. Once you close the terminal or stop the service, it will not restart automatically when you reboot your machine.
+
+2. Confirm psql
+
+    ```
+    psql postgres
+    ...
+    postgres=# \l
+
+    ** should see at least a postgres table **
+
+    ```
