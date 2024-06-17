@@ -18,6 +18,8 @@
 
 ## 5. Configure SSH Key(s)
 
+['Managing Multiple Keys']('https://www.youtube.com/watch?v=pE3EuiyShoM')
+
 1. got home directory and confirm there is an .ssh directory
     ```
     ls -a
@@ -51,11 +53,26 @@
     ```
 
 
-5. Add SSH Key to SSH Agent
+5. Configure Agent (add section to .zshrc file)
 
-    ```
-    ssh-add PREFIX_FOR_FILES
-    ```
+   ```
+    #####
+    # Start SSH agent
+    #####
+    if [ -z "$SSH_AUTH_SOCK" ] ; then
+        # Check if SSH_AUTH_SOCK is not set (indicating no SSH agent is running)
+        eval "$(ssh-agent -s)"  # Start the SSH agent and set the environment variable
+        ssh-add ~/.ssh/reed_meratas_bitbucket  # Add the specific SSH key to the agent
+    fi
+
+    # Ensure the key is added every time a new shell starts
+    if [ -n "$SSH_AUTH_SOCK" ] && ! ssh-add -L | grep -q "$(cat ~/.ssh/reed_meratas_bitbucket.pub)"; then
+        # Check if SSH_AUTH_SOCK is set (indicating an SSH agent is running)
+        # and if the specific SSH key is not already loaded
+        ssh-add ~/.ssh/reed_meratas_bitbucket  # Add the specific SSH key to the agent
+    fi
+   ```
+
 
 ## 6 Configure NVM
 
