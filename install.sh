@@ -1,61 +1,35 @@
 #!/usr/bin/env bash
 
-brew install mas # Mac App Store CLI
+# Function to install Homebrew if not installed
+install_homebrew() {
+    if ! command -v brew &>/dev/null; then
+        # If Homebrew is not found, install it
+        echo "Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        # If Homebrew is already installed, inform the user
+        echo "Homebrew is already installed."
+    fi
+}
 
-## Development
-### Languages
-brew install python@3.9
+# Source the file list
+# This includes the array of file paths defined in file_list.sh
+source ./files_list.sh
 
-### Workflow
-brew install --cask iterm2
-brew install tmux
-brew install nvm
-brew install --cask ngrok
+# Main function to orchestrate the installation process
+main() {
+    # First, ensure all necessary scripts are executable
+    chmod +x check_executable.sh
+    ./check_executable.sh
+    
+    # Iterate over each file in the FILES array and execute it
+    for file in "${FILES[@]}"; do
+        "$file"
+    done
+    
+    # Inform the user that the setup process is complete
+    echo "Setup completed!"
+}
 
-### IDE
-brew install --cask visual-studio-code
-
-### Database
-brew install redis
-brew install postgresql@9.5
-brew install --cask paw
-
-### Containers
-brew install --cask docker
-
-### Time Tracking
-mas install 506189836 # Harvest -- TODO: got an error while downloading but it still installed successfully? 
-
-### Task Tracking
-mas install 1278508951 # Trello -- TODO: did not download `mas search  Trello` shows this  ID
-brew install --cask clickup
-
-## Communication
-brew install --cask slack
-brew install --cask zoom
-brew install --cask discord
-
-## Note Taking
-brew install --cask notion
-brew install --cask roam-research
-
-## Password Management
-brew install --cask 1password
-brew install --cask lastpass
-
-## Browsers
-brew install --cask google-chrome
-
-## Music 
-brew install --cask spotify
-mas install 1440013765 # Elpy
-
-## Email
-brew install --cask postbox
-
-## General
-brew install --cask alt-tab
-brew install --cask numi
-brew install --cask rectangle
-brew install --cask cheatsheet
-mas install 1284863847 # Unsplash Wallpapers
+# Run the main function to start the installation process
+main
