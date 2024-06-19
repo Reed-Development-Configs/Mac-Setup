@@ -60,3 +60,6 @@ brew install --cask postbox
 
 # General
 mas install 1284863847 # Unsplash Wallpapers
+
+# Microsoft Suite
+mas install 462058435 # Microsoft Excel
