@@ -27,7 +27,7 @@ brew install --cask visual-studio-code
 brew install --cask cursor
 
 ## Languages
-### ...python
+brew install python3
 
 ## Workflow
 brew install --cask iterm2
