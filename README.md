@@ -74,7 +74,7 @@
    ```
 
 
-## 6 Configure NVM
+## 6. Configure NVM
 
 1. Add the following code to your .zshrc file
 
@@ -104,7 +104,14 @@
     source ~/.zshrc  # or ~/.bashrc or ~/.bash_profile
     ```
 
-## 7 Manage Postgres
+## 7. Update git Author
+
+    ```
+    git config --global user.name "New Author Name"
+    git config --global user.email "<email@address.example>"
+    ```
+
+## 8. Manage Postgres
 
 1. Start Postgres
     - `brew services start postgresql@14`
