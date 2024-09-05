@@ -24,6 +24,7 @@ brew install --cask stats
 # Development
 ## IDE
 brew install --cask visual-studio-code
+brew install --cask cursor
 
 ## Languages
 ### ...python
