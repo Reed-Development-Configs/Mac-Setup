@@ -33,10 +33,13 @@ brew install python3
 brew install --cask iterm2
 brew install nvm
 
+## API
+brew install --cask paw
+
 ## Database
 brew install redis
+brew install --cask postico
 brew install postgresql@14
-brew install --cask paw
 
 # Communication
 brew install --cask slack
