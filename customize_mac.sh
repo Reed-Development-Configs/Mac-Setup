@@ -15,11 +15,11 @@ defaults write com.apple.dock "orientation" -string "bottom" \
     && killall Dock
 
 ## SCREENSHOTS settings
-# Define the desired screenshots directory
-screenshots_dir="${HOME}/Documents/screenshots"
-
 # Create the directory if it doesn't exist
 mkdir -p "${screenshots_dir}"
+
+# Define the desired screenshots directory
+screenshots_dir="${HOME}/Documents/screenshots"
 
 # Set the screencapture location preference
 defaults write com.apple.screencapture "location" -string "${screenshots_dir}" \
@@ -27,6 +27,8 @@ defaults write com.apple.screencapture "location" -string "${screenshots_dir}" \
 
 ## FINDER settings
 defaults write com.apple.finder "AppleShowAllFiles" -bool "true" \
+    && defaults write com.apple.finder "ShowPathbar" -bool "true" \
+    && defaults write com.apple.finder "ShowStatusBar" -bool "true"
     && defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" \
     && killall Finder
 
