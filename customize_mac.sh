@@ -28,7 +28,7 @@ defaults write com.apple.screencapture "location" -string "${screenshots_dir}" \
 ## FINDER settings
 defaults write com.apple.finder "AppleShowAllFiles" -bool "true" \
     && defaults write com.apple.finder "ShowPathbar" -bool "true" \
-    && defaults write com.apple.finder "ShowStatusBar" -bool "true"
+    && defaults write com.apple.finder "ShowStatusBar" -bool "true" \
     && defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" \
     && killall Finder
 
