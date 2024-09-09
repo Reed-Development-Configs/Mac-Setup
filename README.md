@@ -84,20 +84,9 @@ export PATH="/opt/homebrew/bin:$PATH"
     #####
     # NVM
     #####
-    # Set the NVM_DIR environment variable to the location where nvm will store its data.
-    # $HOME represents the current user's home directory.
     export NVM_DIR="$HOME/.nvm"
-
-    # Check if the nvm.sh script exists at the specified location.
-    # The -s flag tests if the file exists and has a non-zero size.
-    # If the file exists, the && operator ensures the next command is executed.
-    # \. is a shorthand for the 'source' command, which executes the contents of the script in the current shell.
-    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-
-    # Check if the nvm bash completion script exists at the specified location.
-    # Bash completion provides auto-completion features for the nvm command.
-    # If the file exists, source it to enable nvm command auto-completion in the current shell.
-    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
     ```
 
 2. Source the new configuration (or completly exit and reopen terminal)
