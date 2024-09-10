@@ -48,6 +48,7 @@ brew install --cask discord
 
 # Note Taking
 brew install --cask notion
+brew install --cask notion-calendar
 
 # Password Management
 brew install --cask 1password
