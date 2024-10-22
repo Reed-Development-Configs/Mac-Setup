@@ -22,7 +22,11 @@ echo "Installing packages..."
 brew install --cask stats
 
 # Development
+## Github
+brew install gh
+
 ## IDE
+brew install neovim
 brew install --cask visual-studio-code
 brew install --cask cursor
 
