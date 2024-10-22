@@ -34,6 +34,7 @@ brew install --cask cursor
 brew install python3
 
 ## Workflow
+brew install tmux
 brew install --cask iterm2
 brew install nvm
 
