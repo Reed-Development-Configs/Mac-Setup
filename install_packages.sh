@@ -62,6 +62,7 @@ brew install --cask pycharm
 brew install --cask dataspell
 brew install --cask rstudio
 brew install --cask datagrip
+brew install --cask paraview
 
 ## Terminals
 brew install tmux
