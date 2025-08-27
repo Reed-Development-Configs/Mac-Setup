@@ -50,10 +50,18 @@ if ! curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install
     exit 1
 fi
 
+## Languages
+brew install python3
+brew install r
+
 ## IDEs
 brew install neovim
 brew install --cask visual-studio-code
 brew install --cask cursor
+brew install --cask pycharm
+brew install --cask dataspell
+brew install --cask rstudio
+brew install --cask datagrip
 
 ## Terminals
 brew install tmux
@@ -64,9 +72,6 @@ brew install --cask postman # (replaced Paw - purchased by RapidAPI)
 
 ## Containers
 brew install --cask docker
-
-## Languages
-brew install python3
 
 ## Database
 brew install redis
