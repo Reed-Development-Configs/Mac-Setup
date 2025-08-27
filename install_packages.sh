@@ -120,6 +120,9 @@ brew install --cask microsoft-outlook
 ## Note Taking
 brew install --cask obsidian
 
+## Flash Cards
+brew install --cask anki
+
 ## Dictation
 brew install --cask superwhisper
 
