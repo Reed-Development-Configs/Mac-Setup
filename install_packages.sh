@@ -50,6 +50,9 @@ if ! curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install
     exit 1
 fi
 
+## Data Science Environments
+brew install --cask miniconda
+
 ## Languages
 brew install python3
 brew install r
