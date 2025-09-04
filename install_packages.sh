@@ -70,6 +70,7 @@ brew install --cask paraview
 ## Terminals
 brew install tmux
 brew install --cask ghostty # (replaced iTerm2)
+brew install tree
 
 ## API
 brew install --cask postman # (replaced Paw - purchased by RapidAPI)
