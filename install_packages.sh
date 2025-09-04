@@ -121,6 +121,10 @@ brew install --cask emclient
 ### V4 (School - IU Bloomington - Luddy School of Informatics, Computing, and Engineering)
 brew install --cask microsoft-outlook
 
+## Microsoft Office Products
+brew install --cask microsoft-word
+brew install --cask microsoft-excel
+
 ## Note Taking
 brew install --cask obsidian
 
