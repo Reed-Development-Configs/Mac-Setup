@@ -88,6 +88,10 @@ brew install --cask db-browser-for-sqlite
 brew install ollama
 
 # GENERAL MACOS APPLICATIONS ##################################################
+## Cloud File Storage
+brew install --cask onedrive
+brew install --cask google-drive
+
 ## MacOS Monitor
 brew install --cask stats
 
